@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        
+
+    
+        function output() {
+         
+            let result = document.getElementById("value").value; // Corrected to use "value" instead of "length"
+            let length = result.length; // Corrected to use "result" instead of "value"
+            let sum= 0;
+            for (let i = 0; i < result.length; i++) {
+                let digit = parseInt(result.charAt(i), 10);
+                sum += isNaN(digit) ? 0 : digit;
+            }
+            if (length == 7 ) {
+                document.getElementById("thala").innerHTML = "thala for a reason ";
+            }
+            else if (result==7) {
+                document.getElementById("thala").innerHTML= "thala for a reason ";
+                       }
+            else if (sum==7){
+                document.getElementById("thala").innerHTML="Sum is: " + sum +"<br>you are thala for a reason" ;
+            }
+            else {
+                document.getElementById("thala").innerHTML="You are no thala";
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="value">enter to be a thala (dhoni)</label>
+    <input type="text" id="value">
+    <button onclick="output()">click</button>
+    <p id="thala"></p>
+    <h1 id="sumofno"></h1>
+</body>
+</html>
